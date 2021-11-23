@@ -1,0 +1,34 @@
+# Daily-Challange
+
+# import string
+# alphabet_lower = list(string.ascii_lowercase)
+# alphabet_upper = list(string.ascii_uppercase)
+# matrix = [[7,'i',3],
+#     ['T','s','i'],
+#     ['h','%','x'],
+#     ['i',' ','#'],
+#     ['s','M',' '],
+#     ['$','a',' '],
+#     ['#','t','%'],
+#     ['^','r','!']]
+#
+# def decodematrix(matrix, items_per_list):
+#     decoded_words = ''
+#     i = 0
+#     while i < items_per_list:
+#         for char in matrix:
+#             try:
+#                 if char[i] in alphabet_lower or char[i] in alphabet_upper:
+#                     decoded_words += char[i]
+#                 else:
+#                     if decoded_words[-1] == ' ' or char[i] == ' ':
+#                         pass
+#                     elif type(char[i]) is int:
+#                         pass
+#                     else:
+#                         decoded_words += ' '
+#             except:
+#                     pass
+#         i += 1
+#     return decoded_words
+# print(decodematrix(matrix, 3))
