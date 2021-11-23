@@ -1,0 +1,35 @@
+# Daily Challange
+
+# import string
+# alphabet_lower = list(string.ascii_lowercase)
+# alphabet_upper = list(string.ascii_uppercase)
+# def userCypher(message, shift, encrypt_or_decrypt):
+#     cyphered_message = ‘’
+#     extra_chars = [' ‘, ‘,’, ‘.’, ‘!’, “’”,“?”]
+#     for letter in message:
+#         if letter in extra_chars:
+#             cyphered_message += letter
+#         else:
+#             upper_or_lower = alphabet_upper if letter.isupper() else alphabet_lower
+#             index_of_letter = upper_or_lower.index(letter)
+#             if encrypt_or_decrypt == ‘encrypt’:
+#                 cyphered_message += upper_or_lower[index_of_letter - shift]
+#             else:
+#                 if index_of_letter >= 26 - shift:
+#                     new_index = index_of_letter + shift - 26
+#                     cyphered_message += upper_or_lower[new_index]
+#                 else:
+#                     cyphered_message += upper_or_lower[index_of_letter + shift]
+#     return cyphered_message
+# message = “Hello, nice to meet you! What is going on?”
+# cyphered = userCypher(message, 2, ‘encrypt’)
+# userCypher(cyphered, 2, ‘decrypt’)
+
+
+
+# Example for list and dictionary comprhansion
+# users = [“Mickey”, “Minnie”, “Donald”, “Ariel”, “Pluto”]
+# list_range_integers = list(range(len(users)))
+# uneven_numbers = [num for num in range(1,10) if num % 2 != 0]
+# result_dict = {k: v for k,v in zip(users, list_range_integers)}
+# some_dict = {“Mickie” : 4}
