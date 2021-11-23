@@ -48,22 +48,3 @@
 #
 #
 #
-# #Daiy-Challange
-#
-# user_input = input("Please insert a 10 character string:")
-# if len(user_input) > 10:
-#     print("The input is larger than 10 characters")
-# elif len(user_input) < 10:
-#     print("The input is smaller than 10 character")
-# else:
-#     print(f"{user_input[0]} {user_input[-1]}")
-#     result = ""
-#     for c in user_input:
-#         result += c
-#         print(result)
-#
-# import random
-#
-# str_list = list(result)
-# random.shuffle(str_list)
-# ''.join(str_list)
