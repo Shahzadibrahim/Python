@@ -1,0 +1,88 @@
+import datetime
+today = datetime.date.today()
+def date_today():
+    print (f"today's date is {today}")
+
+date_today()
+
+# Ex 2
+from datetime import datetime
+def now_jan():
+    jan= datetime(2022,1,1,0,)
+    diff = jan-datetime.now()
+    print (f'The 1st of January is in {diff} hours')
+now_jan()
+
+
+# Ex 3
+from datetime import datetime
+def minutes_alive(year,month,day):
+    now=datetime.now()
+    birthdate=datetime(year,month,day,00,00,00)
+    diff=now-birthdate
+    total_minutes = int((diff.days*1440)+(diff.seconds/60))
+    return f'You have been alive {total_minutes} minutes'
+
+print(minutes_alive(1981,1,22))
+
+
+#Ex-4
+
+from datetime import datetime
+def next_holiday():
+    now = datetime.now()
+    christmas = datetime(2021, 12, 25, 18, 00, 00)
+    diff = christmas-now
+    print(f"There are {diff} hours until christmas")
+
+next_holiday()
+
+
+# Ex-5
+
+earth_year_in_secs = float(input("How old are you in seconds? "))
+planets = {
+    "Earth":  (earth_year_in_secs * 1 / 60 /60 / 24 / 365),
+    "Mercury": (earth_year_in_secs * 0.2408467) / 60/ 60/ 24 / 365,
+    "Venus": (earth_year_in_secs * 0.61519726) / 60/ 60/ 24 / 365,
+    "Mars": (earth_year_in_secs * 1.8808158) / 60/ 60/ 24 / 365,
+    "Jupiter": (earth_year_in_secs * 11.862615) / 60/ 60/ 24 / 365,
+    "Saturn": (earth_year_in_secs * 29.447498) / 60/ 60/ 24 / 365,
+    "Uranus": (earth_year_in_secs * 84.016846) / 60/ 60/ 24 / 365,
+    "Neptune": (earth_year_in_secs * 164.79132) / 60/ 60/ 24 / 365
+}
+planets = planets.items()
+for planet, time in planets:
+    print("The planet is", planet, "and you are", time, "earth-years old.")
+
+
+# EX-6
+
+
+from faker import Faker
+import random
+fake = Faker()
+fake_names = []
+fake_addresses = []
+
+for i in range(10):
+    fake_names.append(fake.name())
+    fake_addresses.append(fake.address())
+
+
+users = []
+
+
+def new_users(**kwargs):
+    users.append(kwargs)
+    return users
+
+
+new_users(name=random.choice(fake_names),
+          address=random.choice(fake_addresses))
+new_users(name=random.choice(fake_names),
+          address=random.choice(fake_addresses))
+print(new_users())
+
+
+
